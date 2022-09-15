@@ -147,3 +147,4 @@ setInterval(() => {
     startTime ? timeSpent : 0
   } seconds`;
 }, 1000);
+//all error fixed
