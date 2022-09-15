@@ -40,4 +40,3 @@ function displayHistory() {
     histories.appendChild(newRow);
   });
 }
-//all error fixed
