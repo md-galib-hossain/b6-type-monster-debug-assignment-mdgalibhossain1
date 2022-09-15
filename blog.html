@@ -27,5 +27,29 @@
       data is available only inside the window/tab in which it was set​
     </p>
     <h2>What is the difference between Global Scope and Local Scope</h2>
+    <p>
+      <strong>Global Variables:</strong> A global variable has a global scope
+      which means it can be defined anywhere in your JavaScript code.<br />
+
+      <strong>Local Variables:</strong> A local variable will be visible only
+      within a function where it is defined. Function parameters are always
+      local to that function.
+    </p>
+    <h2>How do work Event loop in javascript</h2>
+    <p>
+      When any Asynchronous event occur such as setTimeOut or promises... Then
+      these task takes some time to complete I/O if they have any. If they
+      completed their I/O or don't have any, then they simply put into message
+      queue or callback queue. Then event loop will firstly execute the call
+      stack tasks and then look for callback or message queue and then execute
+      it.
+    </p>
+    <h2>How we will get Undefined from javascript</h2>
+    <p>
+      We will get undefined value when you call a non-existent property or
+      method of an object. In the above example, a function Sum does not return
+      any result but still we try to assign its resulted value to a variable. So
+      in this case, result will be undefined.
+    </p>
   </body>
 </html>
