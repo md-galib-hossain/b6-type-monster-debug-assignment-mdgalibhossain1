@@ -53,6 +53,7 @@ const typeController = (e) => {
   }
 
   // check if given question text is equal to user typed text
+
   if (questionText === userText) {
     gameOver();
   }
@@ -71,7 +72,8 @@ const gameOver = () => {
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
-  const timeTaken = (finishTime - startTime) / 1000;
+  const timeTaken = (finishTime - startTime) / 1000; ///
+  const roundTime = Math.round(timeTaken);
 
   // show result modal
   resultModal.innerHTML = "";
@@ -85,13 +87,13 @@ const gameOver = () => {
   resultModal.innerHTML += `
   
     <h1>Finished!</h1>
-    <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
+    <p>You took: <span class="bold">${roundTime}</span> seconds</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
    
   `;
 
-  addHistory(questionText, timeTaken, errorCount);
+  addHistory(questionText, roundTime, errorCount);
 
   // restart everything
   startTime = null;
